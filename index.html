@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- ══════════════════════════════════════════════════════════════
+     EDIT ME #1 : Page title & search description
+     ══════════════════════════════════════════════════════════════ -->
+<title>Ibrahim Mahmoud | 2027 Right Back / Left Back | Soccer Recruit</title>
+<meta name="description" content="Ibrahim Mahmoud, class of 2027 right back / left back. Highlights, schedule and contact info for college coaches.">
+
+<meta property="og:title" content="Ibrahim Mahmoud | 2027 Right Back / Left Back">
+<meta property="og:description" content="Class of 2027 fullback. Highlights, timeline and schedule.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 1.5 59 16.8v30.4L32 62.5 5 47.2V16.8Z' fill='%23c1121f'/><path d='M17 21H29V25H25V39H29V43H17V39H21V25H17Z' fill='white'/><path d='M27 43V21H31L37 31L43 21H47V43H43V29L39 36H35L31 29V43Z' fill='white'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════════════
+   EDIT ME #2 : Colors. Change --accent to your team color.
+   ══════════════════════════════════════════════════════════════ */
+:root{
+  /* Red / white / blue on white. Every color on the site comes from
+     here, so changing a value updates it everywhere.               */
+  --bg:         #ffffff;      /* white page background */
+  --bg-rgb:     255,255,255;  /* the same white as numbers, for see-through overlays */
+  --bg-2:       #f4f7fb;      /* faint band behind every other section */
+  --card:       #ffffff;      /* cards, tables, the fact box */
+  --line:       #dfe5ee;      /* borders and dividers */
+  --text:       #0d1b33;      /* navy type */
+  --muted:      #56637a;      /* dimmer body copy */
+
+  --accent:      #c1121f;  /* red : headings, links, borders */
+  --accent-rgb:  193,18,31;
+  --accent-solid:#c1121f;  /* filled buttons and the jersey badge */
+  --accent-ink:  #ffffff;  /* type that sits ON the filled red */
+  --accent-soft: #9b1119;  /* deeper red : small type on tinted pills */
+  --accent-2:    #1d4ed8;  /* blue : wins, the second glow, accents */
+  --accent2-rgb: 29,78,216;
+  --shadow: 0 1px 2px rgba(16,24,40,.05), 0 10px 28px rgba(16,24,40,.07);
+  --radius:    14px;
+  --max:       1180px;
+  --head: 'Barlow Condensed', 'Haettenschweiler', 'Arial Narrow', sans-serif;
+  --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:76px}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--body); font-size:17px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+section{padding:88px 0; position:relative; isolation:isolate}
+section > .wrap{position:relative; z-index:1}
+
+/* a faint diagonal weave on the alternating bands, just enough to catch the light */
+section:nth-of-type(even)::after{
+  content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:repeating-linear-gradient(135deg,
+    rgba(13,27,51,.028) 0 1px, transparent 1px 12px);
+}
+.creed::after{display:none}
+section:nth-of-type(even){background:var(--bg-2)}
+section.creed{background:var(--accent-solid)}
+
+.eyebrow{
+  font-family:var(--body); font-size:.74rem; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--accent);
+  margin:0 0 10px; display:flex; align-items:center; gap:10px;
+}
+.eyebrow::before{
+  content:''; width:26px; height:2px; background:var(--accent); flex:none;
+}
+.contact .eyebrow{justify-content:center}
+h2.title{
+  font-family:var(--head); font-weight:800; text-transform:uppercase;
+  font-size:clamp(2.1rem,5.5vw,3.4rem); line-height:.98; letter-spacing:.01em;
+  margin:0 0 14px;
+}
+.lede{color:var(--muted); max-width:62ch; margin:0 0 42px}
+
+/* ── NAV ─────────────────────────────────────────────── */
+header{
+  position:sticky; top:0; z-index:60;
+
+  background:rgba(var(--bg-rgb),.78); backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent; transition:border-color .25s, background .25s;
+}
+header.scrolled{border-bottom-color:var(--line); background:rgba(var(--bg-rgb),.94)}
+header::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,var(--accent) 0 34%,var(--accent-2) 34% 68%,var(--accent) 68% 100%);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; height:70px}
+.brand{
+  display:flex; align-items:center; gap:11px; text-decoration:none; line-height:1;
+}
+.wordmark{
+  font-family:var(--head); font-weight:800; text-transform:uppercase;
+  font-size:1.4rem; letter-spacing:.04em;
+}
+.wordmark span{color:var(--accent); margin-left:.28em}
+.crest{width:37px; height:37px; flex:none; display:block; overflow:visible}
+.crest-body{fill:var(--accent-solid)}
+.crest-sheen{fill:rgba(255,255,255,.13)}
+.crest-inner{fill:none; stroke:rgba(255,255,255,.34); stroke-width:1.1}
+.crest-mark{fill:#fff; fill-rule:evenodd}
+.brand:hover .crest{transform:translateY(-2px)}
+.crest{transition:transform .2s}
+.nav-left{display:flex; align-items:center; gap:14px}
+.brand-links{display:flex; gap:7px}
+.brand-links a{
+  width:32px; height:32px; border-radius:50%; display:grid; place-items:center;
+  border:1px solid var(--line); color:var(--muted); text-decoration:none;
+  font-family:var(--head); font-size:.84rem; font-weight:800; transition:.2s;
+}
+.brand-links a:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px)}
+.brand-links svg{display:block}
+.nav-links{display:flex; gap:30px; align-items:center; list-style:none; margin:0; padding:0}
+.nav-links a{
+  text-decoration:none; font-size:.82rem; font-weight:600;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+  padding:6px 0; border-bottom:2px solid transparent; transition:color .2s, border-color .2s;
+}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text); border-bottom-color:var(--accent)}
+.burger{
+  display:none; background:none; border:0; cursor:pointer; padding:10px;
+  width:44px; height:44px;
+}
+.burger i{display:block; height:2px; background:var(--text); margin:5px 0; transition:.28s}
+.burger.open i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open i:nth-child(2){opacity:0}
+.burger.open i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── BUTTONS ─────────────────────────────────────────── */
+.btn{
+  display:inline-flex; align-items:center; gap:9px;
+  padding:14px 26px; border-radius:100px; text-decoration:none;
+  font-weight:700; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase;
+  border:1.5px solid var(--accent); transition:.2s; cursor:pointer;
+}
+.btn-primary{background:var(--accent-solid); color:var(--accent-ink); border-color:var(--accent-solid)}
+.btn-primary:hover{filter:brightness(1.12); transform:translateY(-2px)}
+.btn-ghost{background:transparent; color:var(--text); border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px)}
+
+/* ── HERO ────────────────────────────────────────────── */
+.hero{
+  min-height:min(94vh,860px); display:flex; align-items:center;
+  padding:100px 0 70px; background:var(--bg); overflow:hidden;
+}
+.hero::before{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(760px 520px at 82% 18%, rgba(var(--accent-rgb),.10), transparent 64%),
+    radial-gradient(560px 460px at 6% 86%, rgba(var(--accent2-rgb),.09), transparent 62%),
+    linear-gradient(160deg, rgba(var(--accent2-rgb),.05), transparent 46%);
+}
+/* centre circle and halfway line, drawn faintly behind the name */
+.hero::after{
+  content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='760' height='760' viewBox='0 0 760 760'><g fill='none' stroke='%230d1b33' stroke-opacity='.075' stroke-width='2.5'><circle cx='60' cy='380' r='250'/><circle cx='60' cy='380' r='7' fill='%230d1b33' fill-opacity='.075' stroke='none'/><path d='M60 0V760'/></g></svg>");
+  background-repeat:no-repeat;
+  background-position:left -120px center;
+  background-size:auto 118%;
+}
+.hero-grid{
+  position:relative; z-index:1; display:grid; gap:52px; align-items:center;
+  grid-template-columns:1.15fr .85fr;
+}
+.kicker{
+  display:inline-flex; align-items:center; gap:10px; margin-bottom:20px;
+  padding:7px 15px; border:1px solid var(--line); border-radius:100px;
+  font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); background:rgba(0,0,0,.02);
+}
+.dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(var(--accent-rgb),.20)}
+h1{
+  font-family:var(--head); font-weight:800; text-transform:uppercase;
+  font-size:clamp(3.2rem,10vw,7rem); line-height:.88; letter-spacing:-.005em;
+  margin:0 0 20px;
+}
+h1 .accent{color:var(--accent); display:block}
+.tagline{font-size:1.12rem; color:var(--muted); max-width:52ch; margin:0 0 34px}
+.hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:38px}
+.hero-meta{display:flex; gap:32px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:24px}
+.hero-meta div b{
+  display:block; font-family:var(--head); font-size:1.55rem; font-weight:700; line-height:1.1;
+}
+.hero-meta div span{font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+
+.portrait{position:relative}
+.portrait .frame{
+  aspect-ratio:4/5; border-radius:20px; overflow:hidden;
+  border:1px solid var(--line); background:linear-gradient(160deg,#eef2f9,#dce4f1);
+  display:flex; align-items:center; justify-content:center; text-align:center;
+}
+.portrait .frame img{width:100%; height:100%; object-fit:cover}
+.ph{color:var(--muted); font-size:.82rem; padding:26px; line-height:1.7}
+.ph b{display:block; font-family:var(--head); font-size:1.5rem; color:var(--text); letter-spacing:.04em}
+.jersey{
+  position:absolute; left:-16px; bottom:26px;
+  background:var(--accent-solid); color:var(--accent-ink);
+  font-family:var(--head); font-weight:800; font-size:2.4rem; line-height:1;
+  padding:14px 20px 12px; border-radius:12px; letter-spacing:.02em;
+  box-shadow:0 14px 34px rgba(16,24,40,.22);
+}
+
+/* ── ABOUT ───────────────────────────────────────────── */
+.about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:52px; align-items:start}
+.about-grid p{color:var(--muted)}
+.about-grid p strong{color:var(--text)}
+.factcard{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:8px 26px; position:sticky; top:96px;
+  box-shadow:var(--shadow);
+}
+.factcard dl{margin:0}
+.factrow{
+  display:flex; justify-content:space-between; gap:18px;
+  padding:15px 0; border-bottom:1px solid var(--line);
+}
+.factrow:last-child{border-bottom:0}
+.factrow dt{font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; color:var(--muted)}
+.factrow dd{margin:0; font-weight:600; text-align:right}
+
+/* ── HIGHLIGHTS ──────────────────────────────────────── */
+/* Nothing is fetched from YouTube until a visitor clicks. Each
+   player is a still with a play button until then, so five videos
+   on one page cost five images rather than five embedded players. */
+.reel-frame{
+  position:relative; background:#0d1b33;
+  border-radius:var(--radius); overflow:hidden; line-height:0;
+  aspect-ratio:16/9;
+}
+.reel-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.yt{
+  position:absolute; inset:0; width:100%; height:100%; padding:0;
+  border:0; cursor:pointer; display:grid; place-items:center;
+  background-color:#0d1b33; background-size:cover; background-position:center;
+}
+.yt::after{
+  content:''; position:absolute; inset:0;
+  background:rgba(13,27,51,.18); transition:background .2s;
+}
+.yt:hover::after{background:rgba(13,27,51,.06)}
+.yt-play{
+  position:relative; z-index:1; width:68px; height:48px; border-radius:12px;
+  background:rgba(18,18,18,.82); display:grid; place-items:center;
+  transition:background .2s, transform .2s;
+}
+.yt:hover .yt-play{background:#ff0000; transform:scale(1.06)}
+.yt-play::after{
+  content:''; border-left:19px solid #fff;
+  border-top:11px solid transparent; border-bottom:11px solid transparent;
+  margin-left:5px;
+}
+.yt:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+
+.reel-hero{margin:0; max-width:960px}
+.reel-hero-title{
+  font-family:var(--head); font-weight:800; text-transform:uppercase;
+  font-size:clamp(1.5rem,3.4vw,2.15rem); letter-spacing:.02em;
+  margin:0 0 14px; color:var(--text);
+}
+.reel-hero .reel-frame{
+  border:1px solid var(--line);
+  box-shadow:0 2px 4px rgba(16,24,40,.06), 0 18px 44px rgba(16,24,40,.12);
+}
+.reel-hero figcaption{
+  margin-top:12px; color:var(--muted);
+  font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+}
+
+/* the break between the hero and the four breakdowns */
+.reel-divider{
+  display:flex; align-items:center; gap:18px;
+  margin:52px 0 30px; color:var(--muted);
+}
+.reel-divider::before,
+.reel-divider::after{content:''; height:1px; background:var(--line); flex:1}
+.reel-divider span{
+  font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* two across on a laptop, one on a phone */
+.reel-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:26px}
+.reel-card{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
+  transition:transform .25s, border-color .25s;
+  display:flex; flex-direction:column;
+}
+.reel-card:hover{transform:translateY(-3px); border-color:#b9c5d8}
+.reel-card h3{
+  font-family:var(--head); font-weight:700; text-transform:uppercase;
+  font-size:1.16rem; line-height:1.2; letter-spacing:.02em;
+  margin:0 0 14px; color:var(--accent); min-height:2.4em;
+}
+.reel-card .reel-frame{margin-top:auto}
+
+/* ── SCHEDULE ────────────────────────────────────────── */
+.table-shell{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--card); box-shadow:var(--shadow)}
+.scroller{overflow-x:auto}
+table{width:100%; border-collapse:collapse; min-width:620px}
+th{
+  text-align:left; font-size:.68rem; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--muted); font-weight:700; padding:16px 22px; background:rgba(0,0,0,.025);
+  border-bottom:1px solid var(--line); white-space:nowrap;
+}
+td{padding:17px 22px; border-bottom:1px solid var(--line); font-size:.94rem}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:rgba(0,0,0,.02)}
+td.date{color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums}
+td.opp{font-weight:600}
+.pill{
+  display:inline-block; padding:4px 11px; border-radius:100px;
+  font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+}
+.w{background:rgba(var(--accent2-rgb),.12); color:var(--accent-2)}
+.l{background:rgba(0,0,0,.05); color:#6b5560}
+.d{background:rgba(0,0,0,.06); color:var(--muted)}
+.up{background:rgba(var(--accent-rgb),.10); color:var(--accent-soft)}
+
+/* ── SCHEDULE ROWS ───────────────────────────────────── */
+td.date b{display:block; font-weight:700; color:var(--text)}
+.yr, .sub{
+  display:block; margin-top:2px;
+  font-size:.74rem; font-weight:500; color:var(--muted); letter-spacing:.01em;
+  white-space:normal;
+}
+.ev-link{
+  font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--accent); text-decoration:none; white-space:nowrap;
+  border-bottom:1px solid rgba(var(--accent-rgb),.35); padding-bottom:1px;
+}
+.ev-link:hover{border-bottom-color:var(--accent)}
+.sched-note{
+  margin:18px 0 0; color:var(--muted); font-size:.86rem; max-width:70ch;
+}
+
+/* ── GALLERY ─────────────────────────────────────────── */
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(245px,1fr)); gap:16px}
+.gallery figure{
+  margin:0; aspect-ratio:1; border-radius:var(--radius); overflow:hidden;
+  border:1px solid var(--line); background:linear-gradient(150deg,#eef2f9,#dce4f1);
+  display:grid; place-items:center; color:var(--muted); font-size:.8rem;
+}
+.gallery img{width:100%; height:100%; object-fit:cover; transition:.4s}
+.gallery figure:hover img{transform:scale(1.06)}
+
+/* ── GALLERY GROUPS + LIGHTBOX ───────────────────────── */
+/* gallery tiles carry a caption so a coach knows the team and year */
+.gallery figure{cursor:zoom-in; position:relative}
+.gallery figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:20px 12px 9px;
+  color:#fff; font-size:.7rem; font-weight:600; letter-spacing:.05em;
+  background:linear-gradient(transparent,rgba(8,14,26,.82));
+  opacity:0; transition:opacity .25s;
+}
+.gallery figure:hover figcaption{opacity:1}
+@media (hover:none){.gallery figcaption{opacity:1}}
+
+.lightbox{
+  position:fixed; inset:0; z-index:200; display:none;
+  background:rgba(8,14,26,.92); backdrop-filter:blur(4px);
+  align-items:center; justify-content:center; padding:28px;
+}
+.lightbox.open{display:flex}
+.lightbox img{
+  max-width:100%; max-height:100%; object-fit:contain;
+  border-radius:8px; box-shadow:0 24px 70px rgba(0,0,0,.6);
+}
+.lb-btn{
+  position:absolute; background:rgba(255,255,255,.10); color:#fff;
+  border:1px solid rgba(255,255,255,.28); border-radius:50%;
+  width:46px; height:46px; cursor:pointer; font-size:1.4rem; line-height:1;
+  display:grid; place-items:center; transition:.2s;
+}
+.lb-btn:hover{background:rgba(255,255,255,.22)}
+.lb-close{top:20px; right:20px}
+.lb-prev{left:20px; top:50%; transform:translateY(-50%)}
+.lb-next{right:20px; top:50%; transform:translateY(-50%)}
+.lb-count{
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+  color:rgba(255,255,255,.75); font-size:.78rem; letter-spacing:.1em;
+}
+@media (max-width:760px){
+  .lightbox{padding:14px}
+  .lb-prev{left:8px} .lb-next{right:8px}
+  .lb-btn{width:40px; height:40px}
+}
+
+/* ── CONTACT ─────────────────────────────────────────── */
+.contact{text-align:center}
+.contact .title{font-size:clamp(2.4rem,7vw,4.6rem)}
+.contact-mail{
+  display:inline-block; margin:6px 0 30px; font-size:clamp(1.05rem,2.6vw,1.5rem);
+  font-weight:600; color:var(--accent); text-decoration:none; word-break:break-all;
+}
+.contact-mail:hover{text-decoration:underline}
+.contact-cards{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));
+  gap:18px; margin-top:52px; text-align:left;
+}
+.ccard{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow)}
+.ccard h4{
+  margin:0 0 12px; font-family:var(--head); font-size:1.15rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.06em;
+}
+.ccard p{margin:0; color:var(--muted); font-size:.92rem; line-height:1.8}
+.ccard a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--line)}
+.ccard a:hover{color:var(--accent); border-color:var(--accent)}
+
+/* ── FOOTER ──────────────────────────────────────────── */
+footer{
+  background:var(--bg); border-top:1px solid var(--line);
+  padding:34px 0; text-align:center; color:var(--muted); font-size:.84rem;
+}
+footer .socials{display:flex; gap:22px; justify-content:center; margin-bottom:16px; flex-wrap:wrap}
+footer .socials a{
+  text-decoration:none; font-size:.74rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+}
+footer .socials a:hover{color:var(--accent)}
+
+/* ── REVEAL ANIMATION ────────────────────────────────── */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1; transform:none}
+
+/* ── RANKING CARD ────────────────────────────────────── */
+.ranking-card{
+  margin:30px 0 0; max-width:520px;
+}
+.ranking-card img{
+  width:100%; height:auto; display:block; cursor:zoom-in;
+  border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); transition:transform .3s;
+}
+.ranking-card img:hover{transform:translateY(-3px)}
+.ranking-card figcaption{
+  margin-top:10px; color:var(--muted);
+  font-size:.7rem; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
+}
+@media (max-width:900px){.ranking-card{margin-inline:auto}}
+
+/* ── JOURNEY COLLAGE ─────────────────────────────────── */
+.journey-collage{
+  margin:34px 0 0; max-width:430px; text-align:left;
+}
+@media (max-width:900px){.journey-collage{margin-inline:auto; text-align:center}}
+.journey-collage img{
+  width:100%; height:auto; display:block; cursor:zoom-in;
+  border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); transition:transform .3s;
+}
+.journey-collage img:hover{transform:translateY(-3px)}
+.journey-collage figcaption{
+  margin-top:16px; color:var(--muted); font-size:.86rem; line-height:1.6;
+}
+.journey-collage figcaption strong{
+  display:block; color:var(--text); font-family:var(--head);
+  font-size:1.25rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em;
+  margin-bottom:3px;
+}
+
+/* ── QUOTE ───────────────────────────────────────────── */
+.creed{
+  background:var(--accent-solid); color:var(--accent-ink);
+  padding:76px 0; text-align:center; overflow:hidden;
+}
+.creed::before{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(620px 300px at 50% 0%, rgba(255,255,255,.15), transparent 70%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 1px, transparent 1px 13px);
+}
+.creed blockquote{margin:0; position:relative}
+.creed p{
+  font-family:var(--head); font-weight:700; text-transform:uppercase;
+  font-size:clamp(1.15rem,3.1vw,2.35rem); line-height:1.22; letter-spacing:.01em;
+  margin:0 auto; max-width:30ch; text-wrap:balance;
+}
+.creed p span{display:block; white-space:nowrap}
+@media (max-width:430px){.creed p span{white-space:normal}}
+.creed p span:nth-child(2){color:rgba(255,255,255,.78)}
+.creed p span:nth-child(3){color:rgba(255,255,255,.78)}
+.creed cite{
+  display:block; margin-top:22px; font-style:normal;
+  font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.72);
+}
+
+/* ── TIMELINE ────────────────────────────────────────── */
+.timeline{position:relative; padding:4px 0}
+.timeline::before{
+  content:''; position:absolute; top:0; bottom:0; left:50%;
+  width:2px; margin-left:-1px; background:var(--line);
+}
+.tl-progress{
+  position:absolute; top:0; left:50%; width:2px; margin-left:-1px;
+  height:var(--tl-fill,0%);
+  background:linear-gradient(var(--accent-2),var(--accent));
+  box-shadow:0 0 12px rgba(var(--accent-rgb),.35);
+  transition:height .12s linear;
+}
+.tl-item{
+  position:relative; display:grid;
+  grid-template-columns:1fr 152px 1fr; align-items:center; margin-bottom:22px;
+}
+.tl-item:last-child{margin-bottom:0}
+.tl-item::before{
+  content:''; position:absolute; top:50%; height:1px; width:33px;
+  background:var(--line); z-index:1;
+}
+.tl-item:nth-of-type(odd)::before{left:calc(50% - 76px); width:42px}
+.tl-item:nth-of-type(even)::before{left:calc(50% + 34px); width:42px}
+
+.tl-year{grid-column:2; display:flex; justify-content:center; z-index:2}
+.tl-year span{
+  font-family:var(--head); font-weight:800; font-size:1.32rem; line-height:1;
+  padding:11px 15px 9px; border-radius:100px; letter-spacing:.02em; white-space:nowrap;
+  background:var(--bg-2); border:2px solid var(--line); color:var(--muted);
+  transition:border-color .35s, color .35s;
+}
+.tl-item.in .tl-year span{border-color:var(--accent); color:var(--accent)}
+/* "2026-Present" is far longer than a year range, so it gets its own size */
+.tl-year span.wide{font-size:1rem; letter-spacing:0; padding:12px 12px 10px}
+
+.tl-content{
+  grid-row:1; position:relative; overflow:hidden; min-height:158px;
+  display:flex; align-items:stretch;
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); transition:transform .25s, border-color .25s; box-shadow:var(--shadow);
+}
+.tl-content:hover{border-color:#b9c5d8; transform:translateY(-3px)}
+/* the photo sits on the outer edge, the words face the rail */
+.tl-item:nth-of-type(odd) .tl-content{grid-column:1; flex-direction:row}
+.tl-item:nth-of-type(even) .tl-content{grid-column:3; flex-direction:row-reverse}
+
+.tl-photo{
+  flex:0 0 43%; position:relative; overflow:hidden;
+  background:linear-gradient(150deg,#eef2f9,#dce4f1);
+}
+.tl-photo img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  transition:transform .5s ease;
+}
+.tl-content:hover .tl-photo img{transform:scale(1.06)}
+
+.tl-text{flex:1 1 auto; align-self:center; padding:22px 24px}
+.tl-item:nth-of-type(even) .tl-text{text-align:right}
+.tl-text h3{
+  font-family:var(--head); font-weight:700; text-transform:uppercase;
+  font-size:1.35rem; letter-spacing:.03em; margin:0 0 6px; color:var(--accent);
+}
+.tl-text p{margin:0; color:var(--muted); font-size:.93rem; line-height:1.6}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width:1080px){
+  .nav-links{gap:19px}
+  .nav-links a{font-size:.75rem; letter-spacing:.08em}
+}
+@media (max-width:900px){
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .portrait{max-width:380px}
+  .factcard{position:static}
+}
+@media (max-width:760px){
+  section{padding:64px 0}
+  .hero{min-height:auto; padding:64px 0 52px}
+  .hero-meta{gap:24px}
+  .jersey{left:auto; right:16px; bottom:16px; font-size:1.9rem}
+  .wordmark{font-size:1.02rem}
+  .crest{width:31px; height:31px}
+  .nav-left{gap:9px}
+  .brand-links{gap:5px}
+  .brand-links a{width:27px; height:27px; font-size:.7rem}
+
+  .reel-grid{grid-template-columns:1fr; gap:20px}
+  .reel-card h3{min-height:0; font-size:1.08rem}
+  .reel-divider{margin:38px 0 24px}
+  .gallery{grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:10px}
+
+  /* ═══ SCHEDULE BECOMES CARDS ═══
+     A four column table cannot fit a phone, and sideways scrolling
+     hides the venue, which is the part a coach needs. Each row
+     turns into a stacked card instead.                          */
+  #schedule table{min-width:0}
+  #schedule thead{display:none}
+  #schedule table,
+  #schedule tbody,
+  #schedule tr,
+  #schedule td{display:block; width:100%}
+  #schedule tr{padding:20px 20px 22px; border-bottom:1px solid var(--line)}
+  #schedule tr:last-child{border-bottom:0}
+  #schedule td{border:0; padding:0}
+  #schedule td.date{margin-bottom:8px}
+  #schedule td.date b{
+    display:inline; font-family:var(--head); font-size:1.2rem;
+    letter-spacing:.03em; color:var(--accent);
+  }
+  #schedule td.date .yr{display:inline; margin:0 0 0 8px}
+  #schedule td.opp{font-size:1.04rem; line-height:1.35; margin-bottom:12px}
+  #schedule td[data-label]{margin-bottom:12px}
+  #schedule td[data-label]:last-child{margin-bottom:0}
+  #schedule td[data-label]::before{
+    content:attr(data-label); display:block; margin-bottom:3px;
+    font-size:.62rem; font-weight:700; letter-spacing:.15em;
+    text-transform:uppercase; color:var(--muted);
+  }
+}
+/* ═══ TIMELINE STACKS ON TABLET AND PHONE ═══
+   Above 860px the rail runs down the middle with cards either side.
+   Below it there is not enough width for two columns plus the rail,
+   so the rail goes and each entry becomes a full width card with the
+   years as a label on top. Keep these rules together.            */
+@media (max-width:940px){
+  /* The brand, three icons and six links need about 832px on one line.
+     At 870px the gap between them was down to 1px, so both the menu and
+     the timeline switch here, well before anything can collide.      */
+  .burger{display:block}
+  .nav-links{
+    position:fixed; inset:70px 0 auto 0; flex-direction:column; gap:0;
+    background:var(--bg); border-bottom:1px solid var(--line);
+    padding:8px 22px 22px; display:none;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{
+    width:100%; padding:16px 0; font-size:1rem; border-bottom:1px solid var(--line);
+  }
+  .nav-links a.active{border-bottom-color:var(--line); color:var(--accent)}
+
+  .timeline::before,.tl-progress{display:none}
+  .timeline{padding:0}
+  /* (the timeline rules below share this breakpoint with the menu) */
+  .tl-item{display:block; margin-bottom:24px}
+  .tl-item::before{display:none}
+  .tl-year{display:block; margin:0 0 10px}
+  .tl-year span,
+  .tl-year span.wide{
+    display:inline-block; font-size:.78rem; letter-spacing:.08em;
+    padding:7px 13px 6px;
+    background:var(--accent-solid); border-color:var(--accent-solid); color:#fff;
+  }
+  .tl-item.in .tl-year span{border-color:var(--accent-solid); color:#fff}
+  .tl-content,
+  .tl-item:nth-of-type(odd) .tl-content,
+  .tl-item:nth-of-type(even) .tl-content{flex-direction:column; min-height:0}
+  .tl-photo{flex:0 0 auto; width:100%; height:210px}
+  .tl-text,
+  .tl-item:nth-of-type(even) .tl-text{text-align:left; align-self:auto; padding:20px 22px}
+  .tl-text h3{font-size:1.3rem}
+}
+
+@media (max-width:400px){
+  /* on the narrowest phones the wordmark gives way so nothing collides */
+  .wordmark span{display:none}
+  .wordmark::after{content:' M.'; color:var(--accent)}
+  .brand{gap:7px}
+  .nav-left{gap:7px}
+  .brand-links{gap:4px}
+  .brand-links a{width:25px; height:25px; font-size:.64rem}
+  .brand-links svg{width:13px; height:13px}
+  .wrap{padding:0 16px}
+  .tl-photo{height:180px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1; transform:none; transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <!-- EDIT ME #3 : your name / logo text -->
+    <div class="nav-left">
+      <!-- EDIT ME #3 : the crest and the wordmark beside it -->
+      <a href="#top" class="brand" aria-label="Ibrahim Mahmoud, home">
+        <svg class="crest" viewBox="0 0 64 64" aria-hidden="true">
+          <path class="crest-body" d="M32 1.5 59 16.8v30.4L32 62.5 5 47.2V16.8Z"/>
+          <path class="crest-sheen" d="M32 1.5 59 16.8v30.4Z"/>
+          <path class="crest-inner" d="M32 7.6 53.6 19.8v24.4L32 56.4 10.4 44.2V19.8Z"/>
+          <g class="crest-mark">
+            <path d="M17 21H29V25H25V39H29V43H17V39H21V25H17Z"/>
+            <path d="M27 43V21H31L37 31L43 21H47V43H43V29L39 36H35L31 29V43Z"/>
+          </g>
+        </svg>
+        <span class="wordmark">IBRAHIM<span>MAHMOUD</span></span>
+      </a>
+      <!-- EDIT ME #3b : the quick-access profile links beside your name -->
+      <div class="brand-links">
+        <a href="https://www.instagram.com/yk.ibraa" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener" aria-label="SportsRecruits profile" title="SportsRecruits">SR</a>
+        <a href="mailto:ibrahimhim2027@gmail.com" aria-label="Email Ibrahim" title="Email">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-links" id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" style="background:var(--bg)">
+  <div class="wrap hero-grid">
+    <div>
+      <!-- EDIT ME #4 : add your city/state after the position if you want it here -->
+      <span class="kicker"><span class="dot"></span> Class of 2027 &nbsp;•&nbsp; Right Back / Left Back</span>
+
+      <h1>Ibrahim<span class="accent">Mahmoud</span></h1>
+
+      <p class="tagline">
+        <!-- EDIT ME #5 : your intro line -->
+        Fullback for LouCity Academy. Comfortable on both flanks, gets forward on the
+        overlap, defends 1v1, and recovers fast. Chasing a spot in college soccer.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#highlights">Watch Highlights</a>
+        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+      </div>
+
+      <div class="hero-meta">
+        <div><b>2027</b><span>Grad Year</span></div>
+        <div><b>RB / LB</b><span>Position</span></div>
+        <div><b>5'8"</b><span>Height</span></div>
+        <div><b>3.6</b><span>GPA</span></div>
+      </div>
+    </div>
+
+    <div class="portrait">
+      <div class="frame">
+        <!-- EDIT ME #6 : hero photo. Swap photos/hero.jpg for a different file to change it. -->
+        <img src="photos/hero.jpg" alt="Ibrahim Mahmoud stepping past a challenge for Sporting Southern Indiana" style="object-position:56% 34%">
+      </div>
+      <!-- EDIT ME #7 : jersey number -->
+      <div class="jersey">#1</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="title reveal">The Player</h2>
+
+    <div class="about-grid">
+      <div class="reveal">
+        <!-- ══ EDIT ME #9 : YOUR STORY ══
+             Anything in [brackets] is a blank for you to fill in. Rewrite freely;
+             this is a starting draft in a fullback's voice, not a description of you. -->
+        <p>
+          I'm <strong>Ibrahim Mahmoud</strong>, a <strong>class of 2027 fullback</strong> from
+          Newburgh, Indiana. I wear <strong>#1 for LouCity Academy</strong>, and I'm
+          comfortable on either side of the back line at right back or left back.
+        </p>
+        <p>
+          My game is built on the overlap. I want to be the outlet when we're building,
+          get to the endline, and put a ball into the box. Coaches usually mention my
+          <strong>speed and agility</strong> first, along with the
+          <strong>pace to get back</strong> and recover when we lose it. On the ball I'm
+          confident playing <strong>accurate passes</strong>, threading
+          <strong>through balls</strong>, and <strong>shooting</strong> when the lane opens.
+        </p>
+        <p>
+          Off the field I attend <strong>Signature School</strong> in Evansville. According to
+          <strong>U.S. News &amp; World Report</strong>, it is the
+          <strong>number one charter school in the nation</strong>, its third time since 2022,
+          and the <strong>number two high school in the nation</strong> for the fourth year
+          running. I carry a <strong>3.6 GPA</strong> there and plan to study
+          <strong>mechanical engineering</strong>. My goal is to play college soccer while
+          earning a degree I can build a career on.
+        </p>
+
+        <!-- ══ EDIT ME #21 : the Signature School ranking graphic ══
+             Save the picture as photos/signature-school.jpg and it appears here.
+             Until then this block hides itself, so nothing looks broken.        -->
+        <figure class="ranking-card reveal">
+          <img src="photos/signature-school.jpg"
+               alt="Signature School recognised by U.S. News and World Report as the number two best high school in the nation and the number one best charter school in the nation, 2026-2027"
+               loading="lazy"
+               onerror="this.closest('figure').remove()">
+          <figcaption>U.S. News &amp; World Report, 2026-2027 Best High Schools</figcaption>
+        </figure>
+
+        <!-- EDIT ME #20 : the montage under your bio. Swap the file to change the picture. -->
+        <figure class="journey-collage reveal">
+          <img src="photos/journey-collage.jpg"
+               alt="A montage of Ibrahim Mahmoud's soccer years, from indoor sessions at Metro through Sporting Southern Indiana and the Indiana Challenge Cup"
+               loading="lazy">
+          <figcaption>
+            <strong>Every season of it.</strong>
+            From the indoor field at Metro to the Indiana Challenge Cup. Click to see it full size.
+          </figcaption>
+        </figure>
+      </div>
+
+      <aside class="factcard reveal">
+        <dl>
+          <!-- ══ EDIT ME #10 : THE FACT TABLE ══
+               This is the first thing a college coach reads. Fill in every dash.
+               Delete any row you don't want to show.                              -->
+          <div class="factrow"><dt>Name</dt><dd>Ibrahim Mahmoud</dd></div>
+          <div class="factrow"><dt>Grad Year</dt><dd>2027</dd></div>
+          <div class="factrow"><dt>Position</dt><dd>Right Back / Left Back</dd></div>
+          <div class="factrow"><dt>Height</dt><dd>5'8"</dd></div>
+          <div class="factrow"><dt>Dominant Foot</dt><dd>Right</dd></div>
+          <div class="factrow"><dt>Club</dt><dd>LouCity Academy, #1</dd></div>
+          <div class="factrow"><dt>High School</dt><dd>Signature School, Evansville</dd></div>
+          <div class="factrow"><dt>School Ranking</dt><dd>No. 1 charter school and No. 2 high school in the nation<br><span style="font-weight:400; color:var(--muted); font-size:.82em">U.S. News &amp; World Report, 2026-2027</span></dd></div>
+          <div class="factrow"><dt>GPA</dt><dd>3.6</dd></div>
+          <div class="factrow"><dt>Hometown</dt><dd>Newburgh, Indiana</dd></div>
+          <div class="factrow"><dt>Intended Major</dt><dd>Mechanical Engineering</dd></div>
+          <div class="factrow"><dt>Honors</dt><dd>Indiana ODP State Team, 2024</dd></div>
+          <div class="factrow"><dt>SportsRecruits</dt><dd><a href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none">View Profile &rarr;</a></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ QUOTE ═══════════════ -->
+<section id="creed" class="creed">
+  <div class="wrap">
+    <!-- EDIT ME #19 : your line -->
+    <blockquote class="reveal">
+      <p><span>Discipline builds the game.</span> <span>Peace of mind sustains it.</span> <span>Balance holds it together.</span></p>
+      <cite>Ibrahim Mahmoud</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ═══════════════ TIMELINE ═══════════════ -->
+<section id="timeline">
+  <div class="wrap">
+    <p class="eyebrow reveal">Journey</p>
+    <h2 class="title reveal">The Road So Far</h2>
+    <p class="lede reveal">From first touch to the recruiting class of 2027.</p>
+
+    <!-- ══════════════════════════════════════════════════════════
+         EDIT ME #18 : YOUR TIMELINE
+         Each <article class="tl-item"> is one entry. The <span> holds the
+         years (a range like 2014-16, or a single year), then a headline
+         and a sentence.
+
+         To give an entry a photo, put the image in the photos folder and
+         add a tl-photo block as the FIRST thing inside tl-content:
+             <div class="tl-photo"><img src="photos/sporting-2021.jpg" alt="..." loading="lazy"></div>
+         Leave it out and the entry is just words, which is fine.
+
+         To delete an entry, delete its whole <article>...</article> block.
+         To add one, copy an existing block and change the years.
+         Keep them in date order; overlapping spans are fine.
+         The left/right alternating and the glowing line handle
+         themselves, so you don't need to touch anything else.
+         ══════════════════════════════════════════════════════════ -->
+
+    <div class="timeline">
+      <div class="tl-progress"></div>
+
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2014-16</span></div>
+        <div class="tl-content">
+          <div class="tl-text">
+            <h3>Sporting Southern Indiana</h3>
+            <p>My first years in club soccer.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2015-17</span></div>
+        <div class="tl-content">
+          <div class="tl-photo"><img src="photos/metro-2017.jpg" alt="Receiving a medal at Metro indoor soccer" loading="lazy"></div>
+          <div class="tl-text">
+            <h3>Metro Indoor Soccer</h3>
+            <p>Two winters of indoor soccer at Metro. Small sided games, constant touches on the ball.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2016-18</span></div>
+        <div class="tl-content">
+          <div class="tl-text">
+            <h3>Tudela FC</h3>
+            <p>Two seasons with Tudela FC.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2018-19</span></div>
+        <div class="tl-content">
+          <div class="tl-text">
+            <h3>Chicago Fire Academy</h3>
+            <p>Joined the Chicago Fire academy setup.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2019-21</span></div>
+        <div class="tl-content">
+          <div class="tl-text">
+            <h3>Covid Break</h3>
+            <p>No organized soccer through this stretch while covid shut down play.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2021-25</span></div>
+        <div class="tl-content">
+          <div class="tl-photo"><img src="photos/sporting-2025b.jpg" alt="Driving forward for Sporting Southern Indiana" loading="lazy"></div>
+          <div class="tl-text">
+            <h3>Back to Sporting Southern Indiana</h3>
+            <p>Returned to Sporting Southern Indiana for four seasons, the longest stretch of my club career so far.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2021-23</span></div>
+        <div class="tl-content">
+          <div class="tl-photo"><img src="photos/school-2021.jpg" alt="School team photo, 2021" loading="lazy"></div>
+          <div class="tl-text">
+            <h3>School Soccer</h3>
+            <p>Made JV in 2021 and moved up to varsity by 2023.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2022</span></div>
+        <div class="tl-content">
+          <div class="tl-photo"><img src="photos/goldencup-team.jpg" alt="Runners up on the podium at the All American Golden Cup" loading="lazy"></div>
+          <div class="tl-text">
+            <h3>All American Golden Cup</h3>
+            <p>Invite only event in Naples, Florida. My team finished runners up.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2022-24</span></div>
+        <div class="tl-content">
+          <div class="tl-photo"><img src="photos/odp-a.jpg" alt="Training indoors with ODP" loading="lazy"></div>
+          <div class="tl-text">
+            <h3>US Youth Soccer ODP</h3>
+            <p>Three years in the US Youth Soccer Olympic Development Program.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2024</span></div>
+        <div class="tl-content">
+          <div class="tl-text">
+            <h3>Indiana State Team</h3>
+            <p>Called up to represent Indiana.</p>
+          </div>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-year"><span>2025-26</span></div>
+        <div class="tl-content">
+          <div class="tl-photo"><img src="photos/loucity-team.jpg" alt="LouCity Academy squad" loading="lazy"></div>
+          <div class="tl-text">
+            <h3>LouCity Academy</h3>
+            <p>Signed with LouCity Academy and joined the Oldham Black team, wearing #1.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <div class="tl-year"><span class="wide">2026-Present</span></div>
+        <div class="tl-content">
+          <div class="tl-text">
+            <h3>Oldham FC</h3>
+            <p>Currently with Oldham FC, playing the college showcase circuit at Grand Park, Gatlinburg and St. Louis.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HIGHLIGHTS ═══════════════ -->
+<section id="highlights">
+  <div class="wrap">
+    <p class="eyebrow reveal">Film</p>
+    <h2 class="title reveal">Highlights</h2>
+    <p class="lede reveal">
+      One reel to start, then four breakdowns by skill. Full match film is available
+      on request, so email me and I will send a link.
+    </p>
+
+    <!-- ══════════════════════════════════════════════════════════
+         EDIT ME #11 : HIGHLIGHT VIDEOS
+
+         These play from YouTube. To change one, put its video id in
+         data-yt. The id is the part after "embed/" in the share code:
+             youtube.com/embed/FRGJIwtqi94   ->   data-yt="FRGJIwtqi94"
+
+         Nothing loads from YouTube until a visitor clicks. Until then
+         they see the still named in the background-image, which comes
+         from photos/. Five players cost one image each, not five
+         video players.
+         ══════════════════════════════════════════════════════════ -->
+
+    <figure class="reel-hero reveal">
+      <h3 class="reel-hero-title">Best of Ibrahim Mahmoud</h3>
+      <div class="reel-frame">
+        <button class="yt" type="button" data-yt="FRGJIwtqi94" data-si="hejKiLY_gVzRtre8"
+                  style="background-image:url(photos/referee-2025.jpg)"
+                  aria-label="Play Best of Ibrahim Mahmoud">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+      </div>
+    </figure>
+
+    <div class="reel-divider reveal"><span>Breakdowns by skill</span></div>
+
+    <div class="reel-grid">
+
+      <article class="reel-card reveal">
+        <h3>Watch My Defending &amp; Recovery</h3>
+        <div class="reel-frame">
+          <button class="yt" type="button" data-yt="xF3yAjr6ew4" data-si="_AT_HQj02v53Y0Qt"
+                  style="background-image:url(photos/loucity-a.jpg)"
+                  aria-label="Play Defending and recovery">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+        </div>
+      </article>
+
+      <article class="reel-card reveal">
+        <h3>Watch My Incisive Passing</h3>
+        <div class="reel-frame">
+          <button class="yt" type="button" data-yt="py1TkDlnMRU" data-si="WWPjpkvJHMqg8RDr"
+                  style="background-image:url(photos/poster-passing.jpg)"
+                  aria-label="Play Incisive passing">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+        </div>
+      </article>
+
+      <article class="reel-card reveal">
+        <h3>Watch My Overlapping Runs &amp; Movement Off the Ball</h3>
+        <div class="reel-frame">
+          <button class="yt" type="button" data-yt="pplK_cufi20" data-si="0Mu29x9sycpYbSdV"
+                  style="background-image:url(photos/poster-runs.jpg)"
+                  aria-label="Play Attacking runs and movement off the ball">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+        </div>
+      </article>
+
+      <article class="reel-card reveal">
+        <h3>Watch My Composure &amp; Play Under Pressure</h3>
+        <div class="reel-frame">
+          <button class="yt" type="button" data-yt="fEnb6kXkSn8" data-si="kNTD0TbGVoVuCuEy"
+                  style="background-image:url(photos/poster-composure.jpg)"
+                  aria-label="Play Composure on the ball and play under pressure">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="margin-top:36px" class="reveal">
+      <!-- EDIT ME #12 : recruiting profile links. Add a Hudl link here too if you make one. -->
+      <a class="btn btn-ghost" href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener">SportsRecruits Profile</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SCHEDULE ═══════════════ -->
+<section id="schedule">
+  <div class="wrap">
+    <p class="eyebrow reveal">Come Watch</p>
+    <h2 class="title reveal">Schedule</h2>
+    <p class="lede reveal">
+      Where you can watch me play this season. ID camps and club showcases with
+      dates, venues and event links. Email me if you would like a roster or a field number.
+    </p>
+
+    <!-- ══ EDIT ME #13 : SCHEDULE ══
+         One <tr> per event. Copy a row to add one, delete a row to remove one.
+         Status pill: "up" is confirmed, "d" is a date not announced yet.        -->
+    <div class="table-shell reveal">
+      <div class="scroller">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Event</th><th>Location</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="date"><b>Nov 13 to 15</b><span class="yr">2026</span></td>
+              <td class="opp">Men's Grand Park College Showcase<span class="sub">Oldham FC</span></td>
+              <td data-label="Location">Grand Park, Indiana</td>
+              <td data-label="Details"><a class="ev-link" href="https://www.academyeventseries.com/event-series/gpmensshowcase" target="_blank" rel="noopener">Event page</a></td>
+            </tr>
+            <tr>
+              <td class="date"><b>Nov 25</b><span class="yr">2026</span></td>
+              <td class="opp">X1 College ID Camp<span class="sub">Individual camp</span></td>
+              <td data-label="Location">Stewart Red Faught Stadium, Franklin College<span class="sub">Grizzly Dr, Franklin, IN 46131</span></td>
+              <td data-label="Details"><span class="pill up">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td class="date"><b>Dec 19</b><span class="yr">2026</span></td>
+              <td class="opp">X1 College ID Camp<span class="sub">Grades 8 to 12</span></td>
+              <td data-label="Location">Cincinnati, OH<span class="sub">Venue to be announced</span></td>
+              <td data-label="Details"><span class="pill up">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td class="date"><b>January</b><span class="yr">2027 date TBA</span></td>
+              <td class="opp">Southeast Boys Showcase<span class="sub">Oldham FC</span></td>
+              <td data-label="Location">Gatlinburg, Tennessee</td>
+              <td data-label="Details"><a class="ev-link" href="https://soccer.sincsports.com/details.aspx?tid=FCACSM&amp;tab=1" target="_blank" rel="noopener">Event page</a></td>
+            </tr>
+            <tr>
+              <td class="date"><b>April</b><span class="yr">2027 date TBA</span></td>
+              <td class="opp">St. Louis Scott Gallagher College Showcase<span class="sub">Oldham FC</span></td>
+              <td data-label="Location">St. Louis, Missouri</td>
+              <td data-label="Details"><a class="ev-link" href="https://www.slsgsoccer.com/tournaments" target="_blank" rel="noopener">Event page</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="sched-note reveal">
+      The two showcases marked TBA run every year. The 2027 dates are not published yet,
+      so I have listed them here and will fill the dates in as soon as they are announced.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ GALLERY ═══════════════ -->
+<section id="gallery">
+  <div class="wrap">
+    <p class="eyebrow reveal">Gallery</p>
+    <h2 class="title reveal">On The Pitch</h2>
+    <p class="lede reveal">A dozen from the last nine years. Click any picture to see it full size.</p>
+
+    <!-- ══ EDIT ME #14 : gallery ══ One figure per photo. The figcaption is the label. -->
+    <div class="gallery reveal">
+      <figure><img src="photos/metro-2017.jpg" alt="Metro Indoor Soccer, 2017" loading="lazy"><figcaption>Metro Indoor Soccer, 2017</figcaption></figure>
+      <figure><img src="photos/sporting-2021.jpg" alt="Sporting Southern Indiana, 2021" loading="lazy"><figcaption>Sporting Southern Indiana, 2021</figcaption></figure>
+      <figure><img src="photos/sportingkc-team.jpg" alt="Sporting Southern Indiana, 2022" loading="lazy"><figcaption>Sporting Southern Indiana, 2022</figcaption></figure>
+      <figure><img src="photos/sporting-2022a.jpg" alt="Sporting Southern Indiana, 2022" loading="lazy"><figcaption>Sporting Southern Indiana, 2022</figcaption></figure>
+      <figure><img src="photos/sporting-2022b.jpg" alt="Sporting Southern Indiana, 2022" loading="lazy"><figcaption>Sporting Southern Indiana, 2022</figcaption></figure>
+      <figure><img src="photos/goldencup-solo.jpg" alt="All American Golden Cup, Naples, 2022" loading="lazy"><figcaption>All American Golden Cup, Naples, 2022</figcaption></figure>
+      <figure><img src="photos/odp-a.jpg" alt="US Youth Soccer ODP" loading="lazy"><figcaption>US Youth Soccer ODP</figcaption></figure>
+      <figure><img src="photos/odp-b.jpg" alt="US Youth Soccer ODP" loading="lazy"><figcaption>US Youth Soccer ODP</figcaption></figure>
+      <figure><img src="photos/sporting-2025a.jpg" alt="Sporting Southern Indiana, 2025" loading="lazy"><figcaption>Sporting Southern Indiana, 2025</figcaption></figure>
+      <figure><img src="photos/sporting-2025c.jpg" alt="Sporting Southern Indiana, 2025" loading="lazy"><figcaption>Sporting Southern Indiana, 2025</figcaption></figure>
+      <figure><img src="photos/loucity-a.jpg" alt="LouCity Academy, 2026" loading="lazy"><figcaption>LouCity Academy, 2026</figcaption></figure>
+      <figure><img src="photos/loucity-b.jpg" alt="LouCity Academy, 2026" loading="lazy"><figcaption>LouCity Academy, 2026</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Get In Touch</p>
+    <h2 class="title reveal">Contact</h2>
+
+    <!-- EDIT ME #15 : your email (appears twice: the link and the text) -->
+    <a class="contact-mail reveal" href="mailto:ibrahimhim2027@gmail.com">ibrahimhim2027@gmail.com</a>
+
+    <div style="margin-top:8px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center" class="reveal">
+      <a class="btn btn-primary" href="mailto:ibrahimhim2027@gmail.com?subject=Recruiting%20Inquiry">Email Me</a>
+      <a class="btn btn-ghost" href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener">SportsRecruits</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/yk.ibraa" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <div class="contact-cards">
+      <div class="ccard reveal">
+        <h4>Player</h4>
+        <!-- EDIT ME #16 : your real email and phone -->
+        <p>
+          Ibrahim Mahmoud<br>
+          <a href="mailto:ibrahimhim2027@gmail.com">ibrahimhim2027@gmail.com</a><br>
+          <a href="tel:+18129652690">(812) 965-2690</a>
+        </p>
+      </div>
+      <div class="ccard reveal">
+        <h4>Club Coach</h4>
+        <p>
+          Grayson Adams<br>
+          LouCity Academy<br>
+          <a href="mailto:gadamsofc@gmail.com">gadamsofc@gmail.com</a><br>
+          <a href="tel:+15022919931">+1 (502) 291-9931</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">&lsaquo;</button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">&rsaquo;</button>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="socials">
+      <!-- EDIT ME #17 : your links. Add more (X, Hudl, TikTok) by copying a line. -->
+      <a href="https://www.instagram.com/yk.ibraa" target="_blank" rel="noopener">@yk.ibraa</a>
+      <a href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener">SportsRecruits</a>
+      <a href="mailto:ibrahimhim2027@gmail.com">Email</a>
+    </div>
+    <p style="margin:0">&copy; <span id="year">2026</span> Ibrahim Mahmoud. Class of 2027.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger');
+  var menu   = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    }
+  });
+
+  /* Header border on scroll */
+  var header = document.querySelector('header');
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 10); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* Reveal on scroll */
+  var revealables = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    revealables.forEach(function(el){ ro.observe(el); });
+  } else {
+    revealables.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Click to load the YouTube player, so nothing loads until asked */
+  document.querySelectorAll('.yt').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-yt');
+      var si = btn.getAttribute('data-si');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) +
+              '?si=' + encodeURIComponent(si) + '&autoplay=1';
+      f.title = btn.getAttribute('aria-label').replace(/^Play /, '');
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
+                'gyroscope; picture-in-picture; web-share';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      btn.replaceWith(f);
+    });
+  });
+
+  /* Active nav link while scrolling */
+  var sections = document.querySelectorAll('section[id]:not(.creed)');
+  var links = {};
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+  if('IntersectionObserver' in window){
+    var no = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var a = links[en.target.id];
+        if(!a) return;
+        if(en.isIntersecting){
+          Object.keys(links).forEach(function(k){ links[k].classList.remove('active'); });
+          a.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    sections.forEach(function(s){ no.observe(s); });
+  }
+
+  /* Timeline progress line fills as you scroll through it */
+  var tl = document.querySelector('.timeline');
+  if(tl){
+    var fillTimeline = function(){
+      var r = tl.getBoundingClientRect();
+      var pct = ((window.innerHeight * 0.55) - r.top) / r.height * 100;
+      tl.style.setProperty('--tl-fill', Math.max(0, Math.min(100, pct)) + '%');
+    };
+    fillTimeline();
+    window.addEventListener('scroll', fillTimeline, {passive:true});
+    window.addEventListener('resize', fillTimeline);
+  }
+
+  /* Lightbox */
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCount = document.getElementById('lbCount');
+  var shots = [], at = 0;
+
+  function collect(){
+    shots = [].slice.call(document.querySelectorAll('.gallery figure img, .journey-collage img, .ranking-card img'));
+  }
+  function show(i){
+    if(!shots.length) return;
+    at = (i + shots.length) % shots.length;
+    lbImg.src = shots[at].getAttribute('src');
+    lbImg.alt = shots[at].alt || '';
+    lbCount.textContent = (at + 1) + ' / ' + shots.length;
+  }
+  function openLb(img){
+    collect();
+    var i = shots.indexOf(img);
+    show(i < 0 ? 0 : i);
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb(){
+    lb.classList.remove('open');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    var img = e.target.closest && e.target.closest('.gallery figure img, .journey-collage img, .ranking-card img');
+    if(img){ openLb(img); }
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); show(at - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); show(at + 1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb || e.target === lbImg) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLb();
+    else if(e.key === 'ArrowLeft') show(at - 1);
+    else if(e.key === 'ArrowRight') show(at + 1);
+  });
+
+  /* Footer year */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
