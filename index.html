@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<!-- ══════════════════════════════════════════════════════════════
-     EDIT ME #1 : Page title & search description
-     ══════════════════════════════════════════════════════════════ -->
 <title>Ibrahim Mahmoud | 2027 Fullback / Winger | Soccer Recruit</title>
 <meta name="description" content="Ibrahim Mahmoud, class of 2027 fullback and winger on both flanks. Highlights, schedule and contact info for college coaches.">
 
@@ -21,26 +18,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ══════════════════════════════════════════════════════════════
-   EDIT ME #2 : Colors. Change --accent to your team color.
-   ══════════════════════════════════════════════════════════════ */
 :root{
-  /* Red / white / blue on white. Every color on the site comes from
-     here, so changing a value updates it everywhere.               */
-  --bg:         #ffffff;      /* white page background */
-  --bg-rgb:     255,255,255;  /* the same white as numbers, for see-through overlays */
-  --bg-2:       #f4f7fb;      /* faint band behind every other section */
-  --card:       #ffffff;      /* cards, tables, the fact box */
-  --line:       #dfe5ee;      /* borders and dividers */
-  --text:       #0d1b33;      /* navy type */
-  --muted:      #56637a;      /* dimmer body copy */
+  /* red / white / blue, change --accent to swap the scheme */
+  --bg:         #ffffff;
+  --bg-rgb:     255,255,255;  /* rgb copy for rgba() overlays */
+  --bg-2:       #f4f7fb;
+  --card:       #ffffff;
+  --line:       #dfe5ee;
+  --text:       #0d1b33;
+  --muted:      #56637a;
 
-  --accent:      #c1121f;  /* red : headings, links, borders */
+  --accent:      #c1121f;
   --accent-rgb:  193,18,31;
-  --accent-solid:#c1121f;  /* filled buttons and the jersey badge */
-  --accent-ink:  #ffffff;  /* type that sits ON the filled red */
-  --accent-soft: #9b1119;  /* deeper red : small type on tinted pills */
-  --accent-2:    #1d4ed8;  /* blue : wins, the second glow, accents */
+  --accent-solid:#c1121f;  /* filled buttons, the jersey badge */
+  --accent-ink:  #ffffff;  /* type on top of accent-solid */
+  --accent-soft: #9b1119;  /* small text on tinted pill backgrounds */
+  --accent-2:    #1d4ed8;  /* blue, used for wins and a second glow */
   --accent2-rgb: 29,78,216;
   --shadow: 0 1px 2px rgba(16,24,40,.05), 0 10px 28px rgba(16,24,40,.07);
   --radius:    14px;
@@ -89,7 +82,7 @@ h2.title{
 }
 .lede{color:var(--muted); max-width:62ch; margin:0 0 42px}
 
-/* ── NAV ─────────────────────────────────────────────── */
+/* nav */
 header{
   position:sticky; top:0; z-index:60;
 
@@ -143,7 +136,7 @@ header::before{
 .burger.open i:nth-child(2){opacity:0}
 .burger.open i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* ── BUTTONS ─────────────────────────────────────────── */
+/* buttons */
 .btn{
   display:inline-flex; align-items:center; gap:9px;
   padding:14px 26px; border-radius:100px; text-decoration:none;
@@ -155,7 +148,7 @@ header::before{
 .btn-ghost{background:transparent; color:var(--text); border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px)}
 
-/* ── HERO ────────────────────────────────────────────── */
+/* hero */
 .hero{
   min-height:min(94vh,860px); display:flex; align-items:center;
   padding:100px 0 70px; background:var(--bg); overflow:hidden;
@@ -185,7 +178,6 @@ header::before{
   font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
   color:var(--muted); background:rgba(0,0,0,.02);
 }
-.dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(var(--accent-rgb),.20)}
 h1{
   font-family:var(--head); font-weight:800; text-transform:uppercase;
   font-size:clamp(3.2rem,10vw,7rem); line-height:.88; letter-spacing:-.005em;
@@ -217,7 +209,7 @@ h1 .accent{color:var(--accent); display:block}
   box-shadow:0 14px 34px rgba(16,24,40,.22);
 }
 
-/* ── ABOUT ───────────────────────────────────────────── */
+/* about */
 .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:52px; align-items:start}
 .about-grid p{color:var(--muted)}
 .about-grid p strong{color:var(--text)}
@@ -235,7 +227,7 @@ h1 .accent{color:var(--accent); display:block}
 .factrow dt{font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; color:var(--muted)}
 .factrow dd{margin:0; font-weight:600; text-align:right}
 
-/* ── HIGHLIGHTS ──────────────────────────────────────── */
+/* highlights */
 /* Nothing is fetched from YouTube until a visitor clicks. Each
    player is a still with a play button until then, so five videos
    on one page cost five images rather than five embedded players. */
@@ -311,7 +303,7 @@ h1 .accent{color:var(--accent); display:block}
 }
 .reel-card .reel-frame{margin-top:auto}
 
-/* ── SCHEDULE ────────────────────────────────────────── */
+/* schedule */
 .table-shell{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--card); box-shadow:var(--shadow)}
 .scroller{overflow-x:auto}
 table{width:100%; border-collapse:collapse; min-width:620px}
@@ -334,7 +326,7 @@ td.opp{font-weight:600}
 .d{background:rgba(0,0,0,.06); color:var(--muted)}
 .up{background:rgba(var(--accent-rgb),.10); color:var(--accent-soft)}
 
-/* ── SCHEDULE ROWS ───────────────────────────────────── */
+/* schedule rows */
 td.date b{display:block; font-weight:700; color:var(--text)}
 .yr, .sub{
   display:block; margin-top:2px;
@@ -351,7 +343,7 @@ td.date b{display:block; font-weight:700; color:var(--text)}
   margin:18px 0 0; color:var(--muted); font-size:.86rem; max-width:70ch;
 }
 
-/* ── GALLERY ─────────────────────────────────────────── */
+/* gallery */
 .gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(245px,1fr)); gap:16px}
 .gallery figure{
   margin:0; aspect-ratio:1; border-radius:var(--radius); overflow:hidden;
@@ -361,7 +353,7 @@ td.date b{display:block; font-weight:700; color:var(--text)}
 .gallery img{width:100%; height:100%; object-fit:cover; transition:.4s}
 .gallery figure:hover img{transform:scale(1.06)}
 
-/* ── GALLERY GROUPS + LIGHTBOX ───────────────────────── */
+/* gallery groups + lightbox */
 /* gallery tiles carry a caption so a coach knows the team and year */
 .gallery figure{cursor:zoom-in; position:relative}
 .gallery figcaption{
@@ -403,7 +395,7 @@ td.date b{display:block; font-weight:700; color:var(--text)}
   .lb-btn{width:40px; height:40px}
 }
 
-/* ── CONTACT ─────────────────────────────────────────── */
+/* contact */
 .contact{text-align:center}
 .contact .title{font-size:clamp(2.4rem,7vw,4.6rem)}
 .contact-mail{
@@ -424,7 +416,7 @@ td.date b{display:block; font-weight:700; color:var(--text)}
 .ccard a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--line)}
 .ccard a:hover{color:var(--accent); border-color:var(--accent)}
 
-/* ── FOOTER ──────────────────────────────────────────── */
+/* footer */
 footer{
   background:var(--bg); border-top:1px solid var(--line);
   padding:34px 0; text-align:center; color:var(--muted); font-size:.84rem;
@@ -436,11 +428,11 @@ footer .socials a{
 }
 footer .socials a:hover{color:var(--accent)}
 
-/* ── REVEAL ANIMATION ────────────────────────────────── */
+/* reveal animation */
 .reveal{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease}
 .reveal.in{opacity:1; transform:none}
 
-/* ── RANKING CARD ────────────────────────────────────── */
+/* ranking card */
 .ranking-card{
   margin:30px 0 0; max-width:520px;
 }
@@ -456,7 +448,7 @@ footer .socials a:hover{color:var(--accent)}
 }
 @media (max-width:900px){.ranking-card{margin-inline:auto}}
 
-/* ── JOURNEY COLLAGE ─────────────────────────────────── */
+/* journey collage */
 .journey-collage{
   margin:34px 0 0; max-width:430px; text-align:left;
 }
@@ -476,7 +468,7 @@ footer .socials a:hover{color:var(--accent)}
   margin-bottom:3px;
 }
 
-/* ── QUOTE ───────────────────────────────────────────── */
+/* quote */
 .creed{
   background:var(--accent-solid); color:var(--accent-ink);
   padding:76px 0; text-align:center; overflow:hidden;
@@ -503,7 +495,7 @@ footer .socials a:hover{color:var(--accent)}
   color:rgba(255,255,255,.72);
 }
 
-/* ── TIMELINE ────────────────────────────────────────── */
+/* timeline */
 .timeline{position:relative; padding:4px 0}
 .timeline::before{
   content:''; position:absolute; top:0; bottom:0; left:50%;
@@ -568,7 +560,7 @@ footer .socials a:hover{color:var(--accent)}
 }
 .tl-text p{margin:0; color:var(--muted); font-size:.93rem; line-height:1.6}
 
-/* ── RESPONSIVE ──────────────────────────────────────── */
+/* responsive */
 @media (max-width:1080px){
   .nav-links{gap:19px}
   .nav-links a{font-size:.75rem; letter-spacing:.08em}
@@ -594,10 +586,7 @@ footer .socials a:hover{color:var(--accent)}
   .reel-divider{margin:38px 0 24px}
   .gallery{grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:10px}
 
-  /* ═══ SCHEDULE BECOMES CARDS ═══
-     A four column table cannot fit a phone, and sideways scrolling
-     hides the venue, which is the part a coach needs. Each row
-     turns into a stacked card instead.                          */
+  /* table -> stacked cards, sideways scroll would hide the venue */
   #schedule table{min-width:0}
   #schedule thead{display:none}
   #schedule table,
@@ -622,15 +611,9 @@ footer .socials a:hover{color:var(--accent)}
     text-transform:uppercase; color:var(--muted);
   }
 }
-/* ═══ TIMELINE STACKS ON TABLET AND PHONE ═══
-   Above 860px the rail runs down the middle with cards either side.
-   Below it there is not enough width for two columns plus the rail,
-   so the rail goes and each entry becomes a full width card with the
-   years as a label on top. Keep these rules together.            */
+/* below 940px the timeline drops the middle rail for stacked cards,
+   and the nav switches to the burger menu at the same breakpoint   */
 @media (max-width:940px){
-  /* The brand, three icons and six links need about 832px on one line.
-     At 870px the gap between them was down to 1px, so both the menu and
-     the timeline switch here, well before anything can collide.      */
   .burger{display:block}
   .nav-links{
     position:fixed; inset:70px 0 auto 0; flex-direction:column; gap:0;
@@ -688,9 +671,7 @@ footer .socials a:hover{color:var(--accent)}
 
 <header id="top">
   <div class="wrap nav">
-    <!-- EDIT ME #3 : your name / logo text -->
     <div class="nav-left">
-      <!-- EDIT ME #3 : the crest and the wordmark beside it -->
       <a href="#top" class="brand" aria-label="Ibrahim Mahmoud, home">
         <svg class="crest" viewBox="0 0 64 64" aria-hidden="true">
           <path class="crest-body" d="M32 1.5 59 16.8v30.4L32 62.5 5 47.2V16.8Z"/>
@@ -703,7 +684,6 @@ footer .socials a:hover{color:var(--accent)}
         </svg>
         <span class="wordmark">IBRAHIM<span>MAHMOUD</span></span>
       </a>
-      <!-- EDIT ME #3b : the quick-access profile links beside your name -->
       <div class="brand-links">
         <a href="https://www.instagram.com/yk.ibraa" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>
@@ -730,17 +710,15 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </header>
 
-<!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" style="background:var(--bg)">
   <div class="wrap hero-grid">
     <div>
-      <!-- EDIT ME #4 : add your city/state after the position if you want it here -->
-      <span class="kicker"><span class="dot"></span> Class of 2027 &nbsp;•&nbsp; Fullback / Winger, Both Flanks</span>
+      <!-- add city/state here if you want it -->
+      <span class="kicker">Class of 2027 &nbsp;•&nbsp; Fullback / Winger, Both Flanks</span>
 
       <h1>Ibrahim<span class="accent">Mahmoud</span></h1>
 
       <p class="tagline">
-        <!-- EDIT ME #5 : your intro line -->
         Fullback and winger for LouCity Academy, comfortable on both flanks. Gets forward on the
         overlap, defends 1v1, and recovers fast. Chasing a spot in college soccer.
       </p>
@@ -760,16 +738,13 @@ footer .socials a:hover{color:var(--accent)}
 
     <div class="portrait">
       <div class="frame">
-        <!-- EDIT ME #6 : hero photo. Swap photos/hero.jpg for a different file to change it. -->
         <img src="photos/hero.jpg" alt="Ibrahim Mahmoud stepping past a challenge for Sporting Southern Indiana" style="object-position:56% 34%">
       </div>
-      <!-- EDIT ME #7 : jersey number -->
       <div class="jersey">#1</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ ABOUT ═══════════════ -->
 <section id="about">
   <div class="wrap">
     <p class="eyebrow reveal">About</p>
@@ -777,9 +752,6 @@ footer .socials a:hover{color:var(--accent)}
 
     <div class="about-grid">
       <div class="reveal">
-        <!-- ══ EDIT ME #9 : YOUR STORY ══
-             Anything in [brackets] is a blank for you to fill in. Rewrite freely;
-             this is a starting draft in a fullback's voice, not a description of you. -->
         <p>
           I'm <strong>Ibrahim Mahmoud</strong>, a <strong>class of 2027 fullback and winger</strong> from
           Newburgh, Indiana. I wear <strong>#1 for LouCity Academy</strong>, and I'm
@@ -804,9 +776,7 @@ footer .socials a:hover{color:var(--accent)}
           earning a degree I can build a career on.
         </p>
 
-        <!-- ══ EDIT ME #21 : the Signature School ranking graphic ══
-             Save the picture as photos/signature-school.jpg and it appears here.
-             Until then this block hides itself, so nothing looks broken.        -->
+        <!-- save the ranking graphic as photos/signature-school.jpg to show it here; hides itself until then -->
         <figure class="ranking-card reveal">
           <img src="photos/signature-school.jpg"
                alt="Signature School recognised by U.S. News and World Report as the number two best high school in the nation and the number one best charter school in the nation, 2026-2027"
@@ -815,7 +785,6 @@ footer .socials a:hover{color:var(--accent)}
           <figcaption>U.S. News &amp; World Report, 2026-2027 Best High Schools</figcaption>
         </figure>
 
-        <!-- EDIT ME #20 : the montage under your bio. Swap the file to change the picture. -->
         <figure class="journey-collage reveal">
           <img src="photos/journey-collage.jpg"
                alt="A montage of Ibrahim Mahmoud's soccer years, from indoor sessions at Metro through Sporting Southern Indiana and the Indiana Challenge Cup"
@@ -829,9 +798,6 @@ footer .socials a:hover{color:var(--accent)}
 
       <aside class="factcard reveal">
         <dl>
-          <!-- ══ EDIT ME #10 : THE FACT TABLE ══
-               This is the first thing a college coach reads. Fill in every dash.
-               Delete any row you don't want to show.                              -->
           <div class="factrow"><dt>Name</dt><dd>Ibrahim Mahmoud</dd></div>
           <div class="factrow"><dt>Grad Year</dt><dd>2027</dd></div>
           <div class="factrow"><dt>Position</dt><dd>Fullback / Winger, Both Flanks</dd></div>
@@ -851,10 +817,8 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </section>
 
-<!-- ═══════════════ QUOTE ═══════════════ -->
 <section id="creed" class="creed">
   <div class="wrap">
-    <!-- EDIT ME #19 : your line -->
     <blockquote class="reveal">
       <p><span>Discipline builds the game.</span> <span>Peace of mind sustains it.</span> <span>Balance holds it together.</span></p>
       <cite>Ibrahim Mahmoud</cite>
@@ -862,31 +826,14 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </section>
 
-<!-- ═══════════════ TIMELINE ═══════════════ -->
 <section id="timeline">
   <div class="wrap">
     <p class="eyebrow reveal">Journey</p>
     <h2 class="title reveal">The Road So Far</h2>
     <p class="lede reveal">From first touch to the recruiting class of 2027.</p>
 
-    <!-- ══════════════════════════════════════════════════════════
-         EDIT ME #18 : YOUR TIMELINE
-         Each <article class="tl-item"> is one entry. The <span> holds the
-         years (a range like 2014-16, or a single year), then a headline
-         and a sentence.
-
-         To give an entry a photo, put the image in the photos folder and
-         add a tl-photo block as the FIRST thing inside tl-content:
-             <div class="tl-photo"><img src="photos/sporting-2021.jpg" alt="..." loading="lazy"></div>
-         Leave it out and the entry is just words, which is fine.
-
-         To delete an entry, delete its whole <article>...</article> block.
-         To add one, copy an existing block and change the years.
-         Keep them in date order; overlapping spans are fine.
-         The left/right alternating and the glowing line handle
-         themselves, so you don't need to touch anything else.
-         ══════════════════════════════════════════════════════════ -->
-
+    <!-- one <article class="tl-item"> per entry, in date order; a tl-photo
+         div as the first child adds a picture, otherwise it's just text -->
     <div class="timeline">
       <div class="tl-progress"></div>
 
@@ -1010,7 +957,6 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </section>
 
-<!-- ═══════════════ HIGHLIGHTS ═══════════════ -->
 <section id="highlights">
   <div class="wrap">
     <p class="eyebrow reveal">Film</p>
@@ -1020,19 +966,8 @@ footer .socials a:hover{color:var(--accent)}
       on request, so email me and I will send a link.
     </p>
 
-    <!-- ══════════════════════════════════════════════════════════
-         EDIT ME #11 : HIGHLIGHT VIDEOS
-
-         These play from YouTube. To change one, put its video id in
-         data-yt. The id is the part after "embed/" in the share code:
-             youtube.com/embed/FRGJIwtqi94   ->   data-yt="FRGJIwtqi94"
-
-         Nothing loads from YouTube until a visitor clicks. Until then
-         they see the still named in the background-image, which comes
-         from photos/. Five players cost one image each, not five
-         video players.
-         ══════════════════════════════════════════════════════════ -->
-
+    <!-- data-yt is the YouTube video id (the part after "embed/" in the
+         share code); nothing loads until a visitor clicks the still -->
     <figure class="reel-hero reveal">
       <h3 class="reel-hero-title">Best of Ibrahim Mahmoud</h3>
       <div class="reel-frame">
@@ -1095,13 +1030,12 @@ footer .socials a:hover{color:var(--accent)}
     </div>
 
     <div style="margin-top:36px" class="reveal">
-      <!-- EDIT ME #12 : recruiting profile links. Add a Hudl link here too if you make one. -->
+      <!-- add a Hudl link here too if you make one -->
       <a class="btn btn-ghost" href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener">SportsRecruits Profile</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ SCHEDULE ═══════════════ -->
 <section id="schedule">
   <div class="wrap">
     <p class="eyebrow reveal">Come Watch</p>
@@ -1111,9 +1045,7 @@ footer .socials a:hover{color:var(--accent)}
       dates, venues and event links. Email me if you would like a roster or a field number.
     </p>
 
-    <!-- ══ EDIT ME #13 : SCHEDULE ══
-         One <tr> per event. Copy a row to add one, delete a row to remove one.
-         Status pill: "up" is confirmed, "d" is a date not announced yet.        -->
+    <!-- one <tr> per event; pill classes are "up" for confirmed, "d" for date TBA -->
     <div class="table-shell reveal">
       <div class="scroller">
         <table>
@@ -1163,14 +1095,13 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </section>
 
-<!-- ═══════════════ GALLERY ═══════════════ -->
 <section id="gallery">
   <div class="wrap">
     <p class="eyebrow reveal">Gallery</p>
     <h2 class="title reveal">On The Pitch</h2>
     <p class="lede reveal">A dozen from the last nine years. Click any picture to see it full size.</p>
 
-    <!-- ══ EDIT ME #14 : gallery ══ One figure per photo. The figcaption is the label. -->
+    <!-- one figure per photo; the figcaption is the label -->
     <div class="gallery reveal">
       <figure><img src="photos/metro-2017.jpg" alt="Metro Indoor Soccer, 2017" loading="lazy"><figcaption>Metro Indoor Soccer, 2017</figcaption></figure>
       <figure><img src="photos/sporting-2021.jpg" alt="Sporting Southern Indiana, 2021" loading="lazy"><figcaption>Sporting Southern Indiana, 2021</figcaption></figure>
@@ -1188,13 +1119,12 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </section>
 
-<!-- ═══════════════ CONTACT ═══════════════ -->
 <section id="contact" class="contact">
   <div class="wrap">
     <p class="eyebrow reveal">Get In Touch</p>
     <h2 class="title reveal">Contact</h2>
 
-    <!-- EDIT ME #15 : your email (appears twice: the link and the text) -->
+    <!-- appears twice below: the link and its visible text -->
     <a class="contact-mail reveal" href="mailto:ibrahimhim2027@gmail.com">ibrahimhim2027@gmail.com</a>
 
     <div style="margin-top:8px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center" class="reveal">
@@ -1206,7 +1136,6 @@ footer .socials a:hover{color:var(--accent)}
     <div class="contact-cards">
       <div class="ccard reveal">
         <h4>Player</h4>
-        <!-- EDIT ME #16 : your real email and phone -->
         <p>
           Ibrahim Mahmoud<br>
           <a href="mailto:ibrahimhim2027@gmail.com">ibrahimhim2027@gmail.com</a><br>
@@ -1237,12 +1166,11 @@ footer .socials a:hover{color:var(--accent)}
 <footer>
   <div class="wrap">
     <div class="socials">
-      <!-- EDIT ME #17 : your links. Add more (X, Hudl, TikTok) by copying a line. -->
+      <!-- add more links (X, Hudl, TikTok) by copying a line -->
       <a href="https://www.instagram.com/yk.ibraa" target="_blank" rel="noopener">@yk.ibraa</a>
       <a href="https://my.sportsrecruits.com/athlete/ibrahim_mahmoud2" target="_blank" rel="noopener">SportsRecruits</a>
       <a href="mailto:ibrahimhim2027@gmail.com">Email</a>
     </div>
-    <p style="margin:0">&copy; <span id="year">2026</span> Ibrahim Mahmoud. Class of 2027.</p>
   </div>
 </footer>
 
@@ -1377,9 +1305,6 @@ footer .socials a:hover{color:var(--accent)}
     else if(e.key === 'ArrowLeft') show(at - 1);
     else if(e.key === 'ArrowRight') show(at + 1);
   });
-
-  /* Footer year */
-  document.getElementById('year').textContent = new Date().getFullYear();
 })();
 </script>
 
